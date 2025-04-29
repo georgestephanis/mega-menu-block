@@ -218,6 +218,11 @@ if ( document.readyState === 'complete' ) {
 
 // Function to convert a complex CSS value to pixels
 function convertCssValueToPixels( cssValue ) {
+	// If there is no value to convert, return zero.
+	if ( ! cssValue ) {
+		return 0;
+	}
+	
 	// Create a temporary element
 	const tempElement = document.createElement( 'div' );
 
